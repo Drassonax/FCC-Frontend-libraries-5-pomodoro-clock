@@ -122,7 +122,7 @@ class PomodoroClock extends React.Component {
                         timerIsSession: !this.state.timerIsSession,
                         timerLabel: 'Session',
                         timerMin: this.state.sessionLength,
-                        timerSec: 0
+                        timerSec: 1
                     })
                 }
             } else if (this.state.timerSec === 0) {
@@ -174,25 +174,28 @@ class PomodoroClock extends React.Component {
     render() {
         return (
             <div>
-                <div id="title">Pomodoro clock</div>
-                <Break 
-                  breakLength={this.state.breakLength}
-                  incrementBreak={this.incrementBreak}
-                  decrementBreak={this.decrementBreak}
-                />
-                <Session 
-                  sessionLength={this.state.sessionLength}
-                  incrementSession={this.incrementSession}
-                  decrementSession={this.decrementSession}
-                />
-                <Timer 
-                  resetTimer={this.resetTimer}
-                  sessionLength={this.state.sessionLength}
-                  timer={this.state.displayTimer}
-                  timerLabel={this.state.timerLabel}
-                  switchIsRunning={this.switchIsRunning}
-                  startOrStop={this.startOrStop}
-                />
+                <h1 id="title">Pomodoro clock</h1>
+                <div id="options">
+                    <Session 
+                    sessionLength={this.state.sessionLength}
+                    incrementSession={this.incrementSession}
+                    decrementSession={this.decrementSession}
+                    />
+                    <Timer 
+                    resetTimer={this.resetTimer}
+                    sessionLength={this.state.sessionLength}
+                    timer={this.state.displayTimer}
+                    timerLabel={this.state.timerLabel}
+                    switchIsRunning={this.switchIsRunning}
+                    startOrStop={this.startOrStop}
+                    isRunning={this.state.isRunning}
+                    />
+                    <Break 
+                    breakLength={this.state.breakLength}
+                    incrementBreak={this.incrementBreak}
+                    decrementBreak={this.decrementBreak}
+                    />
+                </div>
                 <audio src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" id="beep"></audio>
             </div>
         )

@@ -1,0 +1,59 @@
+* {
+    background-color: #152725;
+    color: white;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+}
+
+#options {
+    display: flex;
+    justify-content: space-around;
+    font-size: 32px;
+}
+
+#timer-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+#timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+#timer-label {
+    font-size: 48px;
+}
+
+#time-left {
+    font-size: 60px;
+}
+
+#buttons {
+    font-size: 40px;
+}
+
+#start_stop {
+    margin-right: 10px;
+}
+
+.fas:hover {
+    cursor: pointer;
+}
